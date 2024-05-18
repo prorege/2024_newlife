@@ -5147,11 +5147,11 @@ input[type="range"]::-webkit-slider-thumb:after{
     margin-right:1px;
 }
 
-.footer-socials:after {
+/* .footer-socials:after {
 	content: "";
 	display: table;
 	clear: both;
-}
+} */
 	
 .footer-socials a i{
 	width:35px;
