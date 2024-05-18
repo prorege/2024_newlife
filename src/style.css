@@ -261,6 +261,11 @@ padding: 0;
 
 body {
   background-color: #f2f5f7;
+  font-family: 'NanumMyeongjoExtraBold';
+
+}
+.nanum-font{
+  font-family: NanumMyeongjoExtraBold;
 }
 
 p {
@@ -1278,7 +1283,9 @@ animation-name: slidein;
 #mt-100{
   margin-top: 100px;
 }
-
+.mr-10{
+  margin-right: 10px;
+}
 #mtb-120{
   margin: 120px auto;
 }

@@ -166,9 +166,11 @@
             id="copyUrl"
             href="#"
             class="copyUrl shadow-small icon icon-round no-border icon-xs bg-tumblr"
-            ><i class="fa fa-link font-14"></i>
+            ><i class="fa fa-link font-14 mr-10"></i>
           </a>
-          <a id="copyUrl" href="#" class="copyText copyUrl">링크 복사하기</a>
+          <a id="copyUrl" href="#" class="copyText copyUrl nanum-font"
+            >링크 복사</a
+          >
           <div>
             <textarea id="url" readonly="">
               https://prorege.github.io/2024_newlife/</textarea
@@ -182,46 +184,6 @@
             </script>
           </div>
         </div>
-        <!-- 
-        <div id="information1">
-          <script
-            src="https://t1.kakaocdn.net/kakao_js_sdk/${VERSION}/kakao.min.js"
-            integrity="${INTEGRITY_VALUE}"
-            crossorigin="anonymous"
-          ></script>
-          <script>
-            Kakao.init("596b4307d682209d7117ba6031069a81");
-            Kakao.isInitialized();
-          </script>
-          <script src="./share.js"></script>
-          <a
-            id="kakaotalk-sharing-btn"
-            href="javascript:shareMessage()"
-            class="shadow-small icon icon-round no-border icon-xs"
-          >
-            <img
-              src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
-              class="sns-logo"
-              alt="카카오톡 공유 보내기 버튼"
-              onclick="kakaoShare()"
-            />
-          </a>
-          <a
-            id="kakaotalk-sharing-btn"
-            href="javascript:shareMessage()"
-            class="copyText"
-            onclick="kakaoShare()"
-            >&nbsp;&nbsp;카카오톡으로 공유하기</a
-          >
-
-          <script>
-            function shareMessage() {
-              Kakao.Share.sendScrap({
-                requestUrl: "https://prorege.github.io/2024_newlife/",
-              });
-            }
-          </script>
-        </div> -->
 
         <div id="information1">
           <script
@@ -250,8 +212,8 @@
           <a
             id="kakaotalk-sharing-btn"
             href="javascript:shareMessage()"
-            class="copyText"
-            >&nbsp;&nbsp;카카오톡으로 공유하기</a
+            class="copyText nanum-font"
+            >카카오톡 공유</a
           >
 
           <script>
@@ -263,7 +225,7 @@
           </script>
         </div>
 
-        <div id="information" class="footer-socials">
+        <div id="information" class="footer-socials" style="padding-top: 50px">
           <a
             href="https://www.youtube.com/@hewilldoit"
             target="_blank"
