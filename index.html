@@ -247,9 +247,54 @@
             ><img src="./img2/insta.png" class="sns-logo"
           /></a>
         </div>
-        <div id="visitor-counter" style="text-align: center; margin-top: 20px">
-          <p>방문자 수: <span id="hit-count">0</span></p>
+
+        <div id="visitor-counter" style="text-align: center; padding: 20px">
+          <p>방문자 수: <span id="hit-count">로딩 중...</span></p>
         </div>
+
+        <script>
+          function getCookie(name) {
+            let value = "; " + document.cookie;
+            let parts = value.split("; " + name + "=");
+            if (parts.length == 2) return parts.pop().split(";").shift();
+          }
+
+          function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+              let date = new Date();
+              date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+              expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+          }
+
+          function incrementHitCount() {
+            let hitCount = getCookie("hitCount");
+            if (hitCount === undefined) {
+              hitCount = 0;
+            } else {
+              hitCount = parseInt(hitCount);
+            }
+            hitCount += 1;
+            setCookie("hitCount", hitCount, 365); // 쿠키를 1년 동안 유지
+            return hitCount;
+          }
+
+          function displayHitCount() {
+            let hitCount = getCookie("hitCount");
+            if (hitCount === undefined) {
+              hitCount = 0;
+            }
+            document.getElementById("hit-count").innerText = hitCount;
+          }
+
+          window.onload = function () {
+            let currentHitCount = incrementHitCount();
+            displayHitCount();
+          };
+        </script>
+
         <div id="information2">
           <p class="copyText">
             ©&nbsp;
@@ -262,22 +307,5 @@
         </div>
       </div>
     </div>
-    <script>
-      // 방문자 수를 저장하고 업데이트하는 함수
-      function displayHitCount() {
-        // 로컬 스토리지에서 방문자 수를 가져옵니다.
-        let hitCount = localStorage.getItem("hitCount");
-        if (!hitCount) {
-          hitCount = 0;
-        }
-        hitCount = parseInt(hitCount) + 1;
-
-        // 업데이트된 방문자 수를 로컬 스토리지에 저장합니다.
-        localStorage.setItem("hitCount", hitCount);
-
-        // 방문자 수를 페이지에 표시합니다.
-        document.getElementById("hit-count").innerText = hitCount;
-      }
-    </script>
   </body>
 </html>
