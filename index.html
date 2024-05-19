@@ -246,42 +246,10 @@
             class="shadow-small icon icon-round no-border icon-xs"
             ><img src="./img2/insta.png" class="sns-logo"
           /></a>
-
-          <!-- <a href="https://dmz1023.github.io/invit_playmom/"
-        class="shadow-small icon icon-round no-border icon-xs back-to-top" style="border-radius: 100%;"><i
-          class="fa fa-angle-up" style="background-color: #d2d4d7;"></i></a> -->
         </div>
-        <!-- <div>
-          <img
-            id="mtb-120"
-            class="fiveth-part width-30 blink"
-            src="img2/playmom.png"
-            alt="playmom"
-          />
-        </div> -->
-        <script language="JavaScript">
-          expireDate = new Date();
-          expireDate.setMonth(expireDate.getMonth() + 3);
-          hitCt = eval(cookieVal("pageHit"));
-          hitCt++;
-          document.cookie =
-            "pageHit=" + hitCt + ";expires=" + expireDate.toGMTString();
-          function cookieVal(cookieName) {
-            thisCookie = document.cookie.split("; ");
-            for (i = 0; i < thisCookie.length; i++) {
-              if (cookieName == thisCookie[i].split("=")[0]) {
-                return thisCookie[i].split("=")[1];
-              }
-            }
-            return 0;
-          }
-        </script>
-        <h3>
-          <script language="javascript" type="text/javascript">
-            document.write("현재 홈페이지에" + hitCt + "번째 방문자입니다!");
-          </script>
-        </h3>
-
+        <div id="visitor-counter" style="text-align: center; margin-top: 20px">
+          <p>방문자 수: <span id="hit-count">0</span></p>
+        </div>
         <div id="information2">
           <p class="copyText">
             ©&nbsp;
@@ -292,152 +260,24 @@
             Antioch, all rights reserved
           </p>
         </div>
-        <!--         
-        <div id="second-part" class="">
-          <img
-            id="mt-120"
-            class="second-part width-100 reveal"
-            src="img2/content2.png"
-            alt="cont2"
-          />
-          <img
-            id="mt-50"
-            class="second-part width-40 reveal"
-            src="img2/order.png"
-            alt="order"
-          />
-          <img
-            id="mt-120"
-            class="second-part width-10 reveal"
-            src="img2/leap2.png"
-            alt="leap2"
-          />
-        </div>
-
-        <div class="third-part">
-          <img
-            id="mt-120"
-            class="third-part width-70 reveal"
-            src="img2/list.png"
-            alt="list"
-          />
-          <img
-            id="mt-120"
-            class="second-part width-10 reveal"
-            src="img2/leap2.png"
-            alt="leap2"
-          />
-        </div>
-
-        <div id="mt-50" class="fourth-part reveal width-70">
-          <img
-            id="mt-120"
-            class="fourth-part"
-            src="img2/location.png"
-            alt="location"
-          />
-
-          <div
-            id="map"
-            style="
-              margin: auto;
-              padding: 0;
-              margin-top: 20px;
-              width: 100%;
-              height: 300px;
-            "
-          ></div>
-          <script
-            type="text/javascript"
-            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=aabc292c0136a9e1bcbabcc29f4a1a14"
-          ></script>
-          <script>
-            var container = document.getElementById("map");
-            var options = {
-              center: new kakao.maps.LatLng(
-                37.3003998548915,
-                127.00802501422355
-              ),
-              level: 4,
-            };
-
-            var map = new kakao.maps.Map(container, options);
-
-            // 마커를 표시할 위치와 title 객체 배열입니다
-            var positions = [
-              {
-                title: "주차장",
-                latlng: new kakao.maps.LatLng(
-                  37.29911137278253,
-                  127.00801923792174
-                ),
-              },
-              {
-                title: "키플레이스",
-                latlng: new kakao.maps.LatLng(
-                  37.30109363890302,
-                  127.00823093172505
-                ),
-              },
-            ];
-
-            var imageSrc = "./img2/marker2.png", // 마커이미지의 주소입니다
-              imageSize = new kakao.maps.Size(59, 63); // 마커이미지의 크기입니다
-
-            // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-            var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize),
-              markerPosition = new kakao.maps.LatLng(
-                37.29911137278253,
-                127.00801923792174
-              ); // 마커가 표시될 위치입니다
-
-            var marker = new kakao.maps.Marker({
-              map: map, // 마커를 표시할 지도
-              position: positions[0].latlng, // 마커를 표시할 위치
-              title: positions[0].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-              image: markerImage,
-            });
-
-            var imageSrc = "./img2/marker1.png", // 마커이미지의 주소입니다
-              imageSize = new kakao.maps.Size(59, 63); // 마커이미지의 크기입니다
-
-            // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-            var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize),
-              markerPosition = new kakao.maps.LatLng(
-                37.30109363890302,
-                127.00823093172505
-              ); // 마커가 표시될 위치입니다
-
-            var marker = new kakao.maps.Marker({
-              map: map, // 마커를 표시할 지도
-              position: positions[1].latlng, // 마커를 표시할 위치
-              title: positions[1].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-              image: markerImage,
-            });
-          </script>
-        </div>
-
-        <div id="mb-100" class="reveal">
-          <img
-            id="mt-30"
-            class="fiveth-part width-70"
-            src="img2/content3.png"
-            alt="con3"
-          />
-        </div> -->
       </div>
-
-      <!-- 오시는길 끝 -->
-
-      <!-- 안내문구 끝
-      <div class="footer footer-no-padding" style="transition: all 300ms ease 0s;">
-        <div class="footer-socials">
-
-        <p class="center-text bottom-0"><img src="img/안디옥대학청년회1.png" class="sns-logo"></p>
-        <p class="footer-text"> ©&nbsp;<script>
-            document.write(new Date().getFullYear())
-          </script> Antioch Church</a>, all rights reserved</p>
-      </div> -->
     </div>
+    <script>
+      // 방문자 수를 저장하고 업데이트하는 함수
+      function displayHitCount() {
+        // 로컬 스토리지에서 방문자 수를 가져옵니다.
+        let hitCount = localStorage.getItem("hitCount");
+        if (!hitCount) {
+          hitCount = 0;
+        }
+        hitCount = parseInt(hitCount) + 1;
+
+        // 업데이트된 방문자 수를 로컬 스토리지에 저장합니다.
+        localStorage.setItem("hitCount", hitCount);
+
+        // 방문자 수를 페이지에 표시합니다.
+        document.getElementById("hit-count").innerText = hitCount;
+      }
+    </script>
   </body>
 </html>
