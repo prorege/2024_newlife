@@ -1605,3 +1605,9 @@ padding-right: 0;
   position: relative;
   animation: fadeInUp 2s;
 }
+
+.container-disable { 
+  /* 클릭 불가능 none */
+  pointer-events : none;
+  background-color: lightsalmon;
+}
